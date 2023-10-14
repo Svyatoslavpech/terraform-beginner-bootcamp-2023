@@ -212,6 +212,10 @@ This will generate out a changeset, about the state of our infrastructure and wh
 
 We can output this changeset i.e. "plan" to be passed to an apply, but often you can just ignore outputting.
 
+#### Bucket naming rules
+
+At the start, when we create the name of buckets in Amazon S3, we can get a bucket name having capital letters, which is unacceptable according to the rules. This must be remembered and kept under control and, if possible, corrected immediately.
+
 #### Terraform Apply
 
 `terraform apply`
