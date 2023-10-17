@@ -1,10 +1,4 @@
 terraform {
-<<<<<<< HEAD
-<<<<<<< Updated upstream
-=======
-=======
-  # Using a single workspace: 
->>>>>>> 3d268cb (work with tokens)
 #  backend "remote" {
 #    hostname = "app.terraform.io"
 #    organization = "ExamPro"
@@ -13,24 +7,14 @@ terraform {
 #      name = "terra-house-1"
 #    }
 #  }
-<<<<<<< HEAD
-  cloud {
-    organization = "Sviatoslav"
-=======
 
   cloud {
     organization = "Sviatoslav"
-
->>>>>>> 3d268cb (work with tokens)
     workspaces {
       name = "terra-house-1"
     }
   }
-<<<<<<< HEAD
->>>>>>> Stashed changes
-=======
 
->>>>>>> 3d268cb (work with tokens)
   required_providers {
     random = {
       source = "hashicorp/random"
@@ -45,7 +29,7 @@ terraform {
 
 # Configure the AWS Provider
 provider "aws" {
-  
+
 }
 
 provider "random" {
@@ -62,9 +46,12 @@ resource "random_string" "bucket_name" {
 }
 
 # https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
+
 resource "aws_s3_bucket" "example"  {
+
   # Bucket naming rules
   #https://docs.aws.amazon.com/AmazonS3/latest/userguide/bucketnamingrules.html?icmpid=docs_amazons3_console
+
   bucket = random_string.bucket_name.result
 }
 
